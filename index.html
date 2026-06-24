@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Mineral Finder</title>
+    <link rel="icon" type="image/x-icon" href="../Assets/Sillimanite.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An easy and comprehensive open source tool to find and describe minerals using their physical properties and names, with pictures">
+    <meta name="keywords" content="mineral, physical property, crystal">
+</head>
+<body>
+
+<header class="main-header">
+    <div>
+        <h2><span class="main-title">
+            Search and discover minerals!!
+        </span></h2>
+    </div>
+    <div class="main-search-area">
+        <div class="search-bar-row">
+            <input type="search" id="name-search" name="search" placeholder="Search by mineral name...">
+            <button type="button" id="search-submit-btn" class="action-btn">Search</button>
+        </div>
+        <button type="button" class="collapsible-filter-button" id="filter-toggle-btn">Filter</button>
+        
+        <div class="filters-available" id="filter-panel">
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <h4>Crystal System</h4>
+                    <label><input type="radio" name="crystal_system" value="Isometric"> Isometric</label>
+                    <label><input type="radio" name="crystal_system" value="Tetragonal"> Tetragonal</label>
+                    <label><input type="radio" name="crystal_system" value="Hexagonal"> Hexagonal</label>
+                    <label><input type="radio" name="crystal_system" value="Trigonal"> Trigonal</label>
+                    <label><input type="radio" name="crystal_system" value="Orthorhombic"> Orthorhombic</label>
+                    <label><input type="radio" name="crystal_system" value="Monoclinic"> Monoclinic</label>
+                    <label><input type="radio" name="crystal_system" value="Triclinic"> Triclinic</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Color</h4>
+                    <label><input type="checkbox" name="color" value="Red"> Red</label>
+                    <label><input type="checkbox" name="color" value="Blue"> Blue</label>
+                    <label><input type="checkbox" name="color" value="Green"> Green</label>
+                    <label><input type="checkbox" name="color" value="Yellow"> Yellow</label>
+                    <label><input type="checkbox" name="color" value="White"> White</label>
+                    <label><input type="checkbox" name="color" value="Black"> Black</label>
+                    <label><input type="checkbox" name="color" value="Brown"> Brown</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Twinning</h4>
+                    <label><input type="radio" name="twinning" value="100"> {100}</label>
+                    <label><input type="radio" name="twinning" value="0001"> {0001}</label>
+                    <label><input type="radio" name="twinning" value="010"> {010}</label>
+                    <label><input type="radio" name="twinning" value="110"> {110}</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Cleavage</h4>
+                    <label><input type="radio" name="cleavage" value="Perfect"> Perfect</label>
+                    <label><input type="radio" name="cleavage" value="Good"> Good</label>
+                    <label><input type="radio" name="cleavage" value="Distinct"> Distinct</label>
+                    <label><input type="radio" name="cleavage" value="Poor"> Poor</label>
+                    <label><input type="radio" name="cleavage" value="None"> None</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Mohs Hardness Scale: <span id="mohs-val">Any</span></h4>
+                    <input type="range" id="mohs-slider" name="mohs_scale" min="0" max="10" step="0.5" value="0">
+                </div>
+
+                <div class="filter-group">
+                    <h4>Luster</h4>
+                    <label><input type="checkbox" name="luster" value="Adamantine"> Adamantine</label>
+                    <label><input type="checkbox" name="luster" value="Metallic"> Metallic</label>
+                    <label><input type="checkbox" name="luster" value="Sub-metallic"> Sub-metallic</label>
+                    <label><input type="checkbox" name="luster" value="Vitreous"> Vitreous</label>
+                    <label><input type="checkbox" name="luster" value="Waxy"> Waxy</label>
+                    <label><input type="checkbox" name="luster" value="Resinous"> Resinous</label>
+                    <label><input type="checkbox" name="luster" value="Pearly"> Pearly</label>
+                    <label><input type="checkbox" name="luster" value="Earthy"> Earthy</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Streak</h4>
+                    <label><input type="radio" name="streak" value="White"> White</label>
+                    <label><input type="radio" name="streak" value="Black"> Black</label>
+                    <label><input type="radio" name="streak" value="Red"> Red</label>
+                    <label><input type="radio" name="streak" value="Brown"> Brown</label>
+                    <label><input type="radio" name="streak" value="Yellow"> Yellow</label>
+                </div>
+            </div>
+            
+            <div class="filter-controls">
+                <button type="button" id="reset-filter-btn" class="action-btn">Reset Filters</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main id="content-area">
+    <div class="welcome-message">
+        <h3>Welcome to Mineral Finder</h3>
+        <p>Use the search bar above or choose mineral properties using the filter menu to explore.</p>
+    </div>
+</main>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="contact-area">
+            <h4>Contact Developer</h4>
+            <ul>
+                <li>📧 Email: <a href="mailto:brahimhadjsaid@icloud.com">brahimhadjsaid@icloud.com</a></li>
+                <li>🔩 Github: <a href="https://github.com/btrrr111">btrrr111 (Brahim HADJ SAID)</a></li>
+                <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/brahim-hadj-said/" target="_blank" rel="noopener">Brahim HADJ SAID</a></li>
+                <li>👥 Facebook: <a href="https://web.facebook.com/brahimhadjsaidfb" target="_blank" rel="noopener">Brahim HADJ SAID</a></li>
+            </ul>
+        </div>
+        <div class="footer-container">
+        <p>
+            Mineral profiles and digital media assets are dynamically generated using the 
+            <a href="https://en.wikipedia.org/api/rest_v1/" target="_blank" rel="noopener">Wikipedia API</a>.
+        </p>
+        <p>
+            Text textual content retrieved from Wikipedia® is licensed under the 
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+        </p>
+        <p class="trademark-disclaimer">
+            Wikipedia® and the Wikimedia logos are registered trademarks of the 
+            <a href="https://wikimediafoundation.org/" target="_blank" rel="noopener">Wikimedia Foundation</a>. 
+            This website is an independent and open source searching tool and is not affiliated with, sponsored by, or endorsed by the Wikimedia Foundation.
+        </p>
+    </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
